@@ -1,1 +1,2 @@
-- [x] 189. Rotate array
+- [ ] 189. Rotate array
+- [ ] 191. Number of 1 bits
