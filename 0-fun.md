@@ -1,2 +1,3 @@
-- [ ] 189. Rotate array
+- [x] 189. Rotate array
 - [ ] 191. Number of 1 bits
+- [ ] 203. Remove linked list elements
