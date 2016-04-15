@@ -5,6 +5,7 @@
 - [ ] [WebKit for Developers](http://www.paulirish.com/2013/webkit-for-developers/)
 - [ ] [Chrome History Cartoon](http://www.google.com/googlebooks/chrome/)
 - [ ] [High Performance Networking in Chrome](http://www.aosabook.org/en/posa/high-performance-networking-in-chrome.html)
+- [ ] [Chrome Blink Rendering Engine](http://www.chromium.org/blink)
 
 ## Algorithms
 
