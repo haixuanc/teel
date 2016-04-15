@@ -29,8 +29,10 @@ Loop invariant:
 
 1. 1
 2. enqueue(2) -> 1, 2
+
   2.1. dequeue(), enqueue(1) -> 2, 1
 3. enqueue(3) -> 2, 1, 3
+
   3.1. dequeue(), enqueue(2) -> 1, 3, 2
   3.2. dequeue(), enqueue(1) -> 3, 2, 1
 ...
