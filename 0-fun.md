@@ -1,6 +1,7 @@
-- [x] 189. Rotate array
+- [ ] 189. Rotate array
 - [ ] 191. Number of 1 bits
-- [x] 203. Remove linked list elements
-- [x] 217. Contains duplicates
+- [ ] 203. Remove linked list elements
+- [ ] 217. Contains duplicates
 - [ ] 223. Rectangle area
 - [ ] 225. Implement stack using queues
+- [ ] 231. Power of two
