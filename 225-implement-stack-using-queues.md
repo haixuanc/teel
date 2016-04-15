@@ -1,4 +1,4 @@
-# [225. Implement Stack using queues](https://leetcode.com/problems/implement-stack-using-queues/)
+## [225. Implement Stack using queues](https://leetcode.com/problems/implement-stack-using-queues/)
 
 Implement the following operations of a stack using queues.
 
@@ -13,9 +13,11 @@ You may assume that all operations are valid (for example, no pop or top operati
 
 ## Solution. Rotate a queue like a circle
 
+```
  _________________
 |                 |
 <-head, ..., tail<-
+```
 
 Loop invariant:
 
