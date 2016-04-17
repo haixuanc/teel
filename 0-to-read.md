@@ -11,3 +11,7 @@
 
 - [ ] [Substring search problems](http://algs4.cs.princeton.edu/53substring/)
 - [ ] [Determine If Two Graphs Are Isomorphic](http://www.ms.uky.edu/~csima/ma111/GraphsLecture2.pdf)
+
+## Design
+
+- [ ] [Software Engineering Best Practices](http://12factor.net/)
