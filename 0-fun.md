@@ -9,3 +9,4 @@
 - [ ] 258. Add digits
 - [ ] 278. First bad version
 - [ ] 283. Move zeros
+- [ ] 290. Word pattern
