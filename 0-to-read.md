@@ -6,6 +6,7 @@
 - [ ] [Chrome History Comic](http://www.google.com/googlebooks/chrome/)
 - [ ] [High Performance Networking in Chrome](http://www.aosabook.org/en/posa/high-performance-networking-in-chrome.html)
 - [ ] [Chrome Blink Rendering Engine](http://www.chromium.org/blink)
+- [ ] [Event Bubbling and Capturing](http://javascript.info/tutorial/bubbling-and-capturing)
 
 ## Algorithms
 
