@@ -11,3 +11,4 @@
 - [ ] 283. Move zeros
 - [ ] 290. Word pattern
 - [ ] 292. Nim game
+- [ ] 294. Flip game II
