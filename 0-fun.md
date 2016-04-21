@@ -10,3 +10,4 @@
 - [ ] 278. First bad version
 - [ ] 283. Move zeros
 - [ ] 290. Word pattern
+- [ ] 292. Nim game
