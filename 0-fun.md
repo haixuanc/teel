@@ -12,3 +12,4 @@
 - [ ] 290. Word pattern
 - [ ] 292. Nim game
 - [ ] 294. Flip game II
+- [ ] 299. Bulls and cows
