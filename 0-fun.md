@@ -13,3 +13,4 @@
 - [ ] 292. Nim game
 - [ ] 294. Flip game II
 - [ ] 299. Bulls and cows
+- [ ] 325. Maximum size subarray sum equals k
