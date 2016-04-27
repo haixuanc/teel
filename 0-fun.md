@@ -14,3 +14,4 @@
 - [ ] 294. Flip game II
 - [ ] 299. Bulls and cows
 - [ ] 325. Maximum size subarray sum equals k
+- [ ] 342. Power of four
