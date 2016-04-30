@@ -1,3 +1,4 @@
 - [ ] Compiler
 - [ ] Living design documentation
 - [ ] Check machine learning course prerequisites. Math: calculus, linear algebra, stats.
+- [ ] React validator
