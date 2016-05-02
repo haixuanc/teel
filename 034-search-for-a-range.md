@@ -1,4 +1,4 @@
-34. Search for a Range   My Submissions QuestionEditorial Solution
+# [34. Search for a Range](https://leetcode.com/problems/search-for-a-range/)
 
 Given a sorted array of integers, find the starting and ending position of a given target value.
 
@@ -10,9 +10,9 @@ For example,
 Given [5, 7, 7, 8, 8, 10] and target value 8,
 return [3, 4].
 
+## Solution. Two binary search
 
-
-
+```java
 public class Solution {
     public int[] searchRange(int[] nums, int target) {
 		return range(nums, target, 0, nums.length - 1);
@@ -40,8 +40,15 @@ public class Solution {
 		while (start < end) {
 			int mid = (start + end) / 2;
 			if (nums[mid] == target) {
-				if (lowerBound) end = mid;
-				else start = mid;
+				if (lowerBound) {
+				    end = mid;
+				}
+				else {
+				    start = mid;
+				    // Edge case: [t, t] => [t], or [t, x] => start
+				    if (start < end && nums[start] == nums[start + 1]) start++;
+				    else return start;
+				}
 			} else if (nums[mid] < target) {
 				start = mid + 1;
 			} else {
@@ -52,6 +59,7 @@ public class Solution {
 		return nums[start] == target ? start : -1;
 	}
 }
+```
 
 ## Toughts on binary search
 
