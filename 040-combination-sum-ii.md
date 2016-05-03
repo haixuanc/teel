@@ -1,4 +1,4 @@
-# [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
+## [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
 
 Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
 
@@ -21,32 +21,36 @@ Time: O(n! + (n-1)! + .. + 1)
 
 ```java
 public class Solution {
-    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-		List<List<Integer>> res = new ArrayList<List<Integer>>();
-		Arrays.sort(candidates);
-		dfs(res, new ArrayList<Integer>(), 0, candidates, target);
-		return res;
-    }
+  public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+    List<List<Integer>> res = new ArrayList<List<Integer>>();
+    Arrays.sort(candidates);
+    dfs(res, new ArrayList<Integer>(), 0, candidates, target);
+    return res;
+  }
 
-	private void dfs(List<List<Integer>> res, List<Integer> path, int index, int[] candidates, int target) {
-		if (target < 0) return;
-		if (target == 0) {
-			res.add(new ArrayList<Integer>(path));
-			return;
-		}
-		for (int i = index; i < candidates.length; i++) {
-			// Skip the next same element to avoid duplicated solutions
-			//
-			// Loop invariant:
-			// At step i, all solutions with leading elements of a[:i] have
-			// already been explored because in DFS a node is marked visited
-			// when all of its children have been marked visited.
-			if (i != index && candidates[i] == candidates[i - 1]) continue;
-			path.add(candidates[i]);
-			dfs(res, path, i + 1, candidates, target - candidates[i]);
-			path.remove(path.size() - 1);
-		}
-	}
+  private void dfs(List<List<Integer>> res, List<Integer> path, int index, int[] candidates, int target) {
+    if (target < 0) return;
+    if (target == 0) {
+      res.add(new ArrayList<Integer>(path));
+      return;
+    }
+    for (int i = index; i < candidates.length; i++) {
+      // Skip the next same element to avoid duplicated solutions
+      //
+      // Loop invariant:
+      // At step i, all solutions with leading elements of a[:i] have
+      // already been explored because in DFS a node is marked visited
+      // when all of its children have been marked visited.
+      if (i != index && candidates[i] == candidates[i - 1]) continue;
+      int remaining = target - candidates[i];
+      // Optimization: no need to explore the tree if sum of the path to its
+      // root already exceeds the target.
+      if (remaining < 0) break;
+      path.add(candidates[i]);
+      dfs(res, path, i + 1, candidates, remaining);
+      path.remove(path.size() - 1);
+    }
+  }
 }
 ```
 
