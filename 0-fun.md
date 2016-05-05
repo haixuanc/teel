@@ -23,3 +23,4 @@
 - [ ] 043. Multiply strings
 - [ ] 059. Spiral matrix II
 - [ ] 060. Permutation sequence
+- [ ] 069. Square root
