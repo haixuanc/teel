@@ -22,3 +22,4 @@
 - [ ] 040. Combination sum II
 - [ ] 043. Multiply strings
 - [ ] 059. Spiral matrix II
+- [ ] 060. Permutation sequence
