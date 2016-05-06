@@ -24,3 +24,4 @@
 - [ ] 059. Spiral matrix II
 - [ ] 060. Permutation sequence
 - [ ] 069. Square root
+- [ ] 071. Simplify path
