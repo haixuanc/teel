@@ -25,3 +25,4 @@
 - [ ] 060. Permutation sequence
 - [ ] 069. Square root
 - [ ] 071. Simplify path
+- [ ] 073. Set matrix zeroes
