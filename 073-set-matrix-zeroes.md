@@ -16,7 +16,7 @@ Time: O(mn)
 
 Space: O(m + n)
 
-## Solution 3. Constant space
+## Solution 2. Constant space
 
 Store the results in the first row and column. Note matrix[0][0] can only represent the first row or the first column, it cannot represent both. We have to use one extra variable.
 
