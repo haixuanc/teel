@@ -26,3 +26,4 @@
 - [ ] 069. Square root
 - [ ] 071. Simplify path
 - [ ] 073. Set matrix zeroes
+- [ ] 075. Sort colors
