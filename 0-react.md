@@ -1,9 +1,27 @@
+## Build systems
+
+- [ ] Make
+
 ## Task runners
 
 - Grunt
-- Gulp
+- [ ] Gulp
 
 ## Bundlers
 
-- Browserify
-- Webpack
+- [ ] Browserify
+- [ ] Webpack
+- JSPM
+
+## Module formats
+
+- CommonJS
+- ES6
+- AMD
+- UMD
+
+## MISC
+
+- Sourcemaps
+- Babel
+
