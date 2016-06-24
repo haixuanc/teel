@@ -1,4 +1,4 @@
-# [81. Search in Rotated Sorted Array II My Submissions QuestionEditorial Solution](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+# [81. Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
 
 Follow up for "Search in Rotated Sorted Array":
 What if duplicates are allowed?
