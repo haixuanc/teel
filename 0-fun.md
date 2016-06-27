@@ -29,3 +29,4 @@
 - [ ] 075. Sort colors
 - [ ] 077. Combinations
 - [ ] 080. Remove duplicates from sorted array II
+- [ ] 082. Remove duplicates from sorted list II
