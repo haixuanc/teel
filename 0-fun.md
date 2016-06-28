@@ -1,3 +1,12 @@
+## Programming topics
+
+- Two pointers
+- Backtrace
+- Linked list - dummy header
+- Linked list - two runners
+
+## Fun problems
+
 - [ ] 189. Rotate array
 - [ ] 191. Number of 1 bits
 - [ ] 203. Remove linked list elements
