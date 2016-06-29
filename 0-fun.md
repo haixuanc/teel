@@ -40,3 +40,4 @@
 - [ ] 080. Remove duplicates from sorted array II
 - [ ] 082. Remove duplicates from sorted list II
 - [ ] 090. Subsets ||
+- [ ] 092. Reverse linked list ||
