@@ -36,3 +36,42 @@ public class Solution {
   }
 }
 ```
+
+## Solution 2. Two pointer with sorted array
+
+This solution will modify the ordering of the input array, so it works better if the solution only needs to return a boolean value indicating whether a pair of numbers can be found to satisfy the problem.
+
+Time: O(nlgn) if quicksort is used
+Space: O(n) or O(1) depends on whether the sorting algorithm is in-place or not
+
+```java
+public class Solution {
+  public boolean twoSum(int[] nums, int target) {
+    Arrays.sort(nums); // Quicksort takes O(nlgn) time
+    for (int i = 0, j = nums.length - 1; i < j; ) {
+      if (nums[i] + nums[j] == target) return true;
+      if (nums[i] + nums[j] < target) ++i;
+      else --j;
+    }
+    return false;
+  }
+}
+```
+
+## Solution 3. Two-pass traversal
+
+Time: O(n^2)
+Space: O(1)
+
+```java
+public class Solution {
+  public int[] twoSum(int[] nums, int target) {
+    for (int i = 0; i < nums.length - 1; i++) {
+      for (int j = i + 1; j < nums.length; j++) {
+        if (nums[i] + nums[j] == target) return new int[] { i, j };
+      }
+    }
+    return null;
+  }
+}
+```
