@@ -122,3 +122,38 @@ public class Solution {
   }
 }
 ```
+
+## Solution 3. A more streamlined version
+
+To streamline the code for linked list problems, we usually create a dummyHead node before the head of the linked list.
+
+```java
+/**
+ * Definition for singly-linked list.
+ *  * public class ListNode {
+ *   *     int val;
+ *    *     ListNode next;
+ *     *     ListNode(int x) { val = x; }
+ */
+public class Solution {
+  public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    ListNode dummyHead = new ListNode(0);
+    ListNode cur = dummyHead;
+    boolean carry = false;
+    while (l1 != null || l2 != null || carry) {
+      cur = cur.next = new ListNode(carry ? 1 : 0);
+      if (l1 != null) {
+        cur.val += l1.val;
+        l1 = l1.next;
+      }
+      if (l2 != null) {
+        cur.val += l2.val;
+        l2 = l2.next;
+      }
+      carry = cur.val > 9;
+      if (carry) cur.val -= 10;
+    }
+    return dummyHead.next;
+  }
+}
+```
