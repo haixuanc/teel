@@ -21,8 +21,6 @@ Test cases had been added to test the overflow behavior.
 
 ## Solution 1
 
-The above property can act as the loop invariant of your program.
-
 Time: O(n)
 
 Space: O(lgn) number of bits to store the reverse integer
@@ -46,3 +44,4 @@ public class Solution {
 The catch is how to check for **integer overflow**.
 
 Suppose for a valid positive integer x, y[..., n] is the reverse integer for x[n, ...], the n rightmost digits of x.  If x still has some remaining digits unexplored and y does not overflow, then y[..., n] * 10 + x[n+1] <= max. Since x[n+1] >= 0, y[.., n] * 10 <= max => y[.., n] <= max/10. Conversely, if y[.., n] > max/10, the reverse for x[n + 1, …] will overflow.
+The above property can act as the loop invariant of your program.
