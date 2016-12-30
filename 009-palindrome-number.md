@@ -22,8 +22,10 @@ A straight-forward solution is to reverse the entire number and compare if the r
 Another definition of a palindrome number is its first half is the reverse of its second half. I.e. a palindrome can be represented as:
 
 - y
-- xyx
-- xx
+- xyx'
+- xx'
+
+where x' is the reverse of x.
 
 How do we know that we have traversed half of a number?
 
