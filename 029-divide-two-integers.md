@@ -40,9 +40,37 @@ public class Solution {
 }
 ```
 
-## Two's compliment respresentation in Java
+A straightforward idea is to approach the dividend linearly, which takes O(dividend / divisor) time. A faster way is to approach exponentially, which takes O(log(dividend / divisor)) time. We repeat this process as long as dividend is greater than or equal to divisor.
+
+```java
+public class Solution {
+  public int divide(int dividend, int divisor) {
+    if (divisor == 0 || (dividend == Integer.MIN_VALUE && divisor == -1)) return Integer.MAX_VALUE;
+    int sign = dividend >= 0 && divisor > 0 || dividend <= 0 && divisor < 0 ? 1 : -1;
+    long upper = Math.abs((long) dividend);
+    long lower = Math.abs((long) divisor);
+    int quotient = 0;
+    while (lower <= upper) {
+      long val = lower;
+      long exp = 1;
+      while (val <= upper) {
+        val <<= 1;
+        exp <<= 1;
+      }
+      quotient += exp >> 1;
+      upper -= val >> 1;
+    }
+    return quotient * sign;
+  }
+}
+```
+
+## Two's compliment representation in Java
 
 [0/1][xx..x]
+
+- sign bit = 0 : positive integer
+- sign bit = 1 : negative integer
 
 - Integer.MAX_VALUE = 2 ^ 31 - 1 = 011..1
 - Integer.MIN_VALUE = 2 ^ 31 = 100..0 = -(flip every bit, then plus one)
