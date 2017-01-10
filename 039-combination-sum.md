@@ -48,3 +48,32 @@ public class Solution {
 	}
 }
 ```
+
+### A minor revision - only continue iterating through the rest of the array if target is greater than or equal to current number
+
+```java
+public class Solution {
+  public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    List<List<Integer>> res = new ArrayList<List<Integer>>();
+    Arrays.sort(candidates);
+    dfs(res, new ArrayList<Integer>(), candidates, target, 0);
+    return res;
+  }
+
+  private void dfs(List<List<Integer>> res, List<Integer> path, int[] candidates, int target, int start) {
+    if (target == 0) {
+      res.add(new ArrayList<Integer>(path));
+      return;
+    }
+    // To avoid adding duplicate combinations, for each call we only consider
+    // sub-array of [start, ...]. I.e. we sort all valid combinations by their
+    // first elements and iterate through them in order. Therefore the combinations
+    // added are guaranteed to be unique.
+    for (int i = start; i < candidates.length && candidates[i] <= target; i++) {
+      path.add(candidates[i]);
+      dfs(res, path, candidates, target - candidates[i], i);
+      path.remove(path.size() - 1);
+    }
+  }
+}
+```
