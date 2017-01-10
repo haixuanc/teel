@@ -4,7 +4,7 @@ Divide two integers without using multiplication, division and mod operator.
 
 If it is overflow, return MAX_INT.
 
-## Solution. Binary search based logrithmic calculation
+## Solution 1. Binary search based logrithmic calculation
 
 If a = b * k + mod(a, b), k = 2^i + 2^j + .. + 2^q.
 
@@ -62,6 +62,15 @@ public class Solution {
     }
     return quotient * sign;
   }
+}
+```
+
+## Solution 2. Recursive binary search
+
+```
+f(dividend, divisor) = {
+  quotient: f(dividend / 2, divisor).quotient + f(dividend - dividend / 2, divisor).quotient + (f(dividend / 2, divisor).remainder + f(dividend - dividend / 2, divisor).remainder) / divisor,
+  remainder: (f(...).remainder + f(...).remainder) % divisor
 }
 ```
 
