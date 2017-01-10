@@ -45,4 +45,5 @@
 - [ ] 109. Convert sorted list to binary search tree
 - [ ] 011. Container with most water
 - [ ] 015. 3Sum
-- [ ] 016. 3Sum Closet
+- [ ] 016. 3Sum closest
+- [ ] 022. Generate parentheses
