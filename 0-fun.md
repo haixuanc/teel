@@ -47,3 +47,4 @@
 - [ ] 015. 3Sum
 - [ ] 016. 3Sum closest
 - [ ] 022. Generate parentheses
+- [ ] 459. Repeated substring pattern
