@@ -50,3 +50,4 @@
 - [ ] 459. Repeated substring pattern
 - [ ] 396. Rotate function
 - [ ] 204. Count primes
+- [ ] 438. Find all anagrams in a string
