@@ -49,3 +49,4 @@
 - [ ] 022. Generate parentheses
 - [ ] 459. Repeated substring pattern
 - [ ] 396. Rotate function
+- [ ] 204. Count primes
