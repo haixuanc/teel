@@ -47,7 +47,7 @@ public class Solution {
 
 This problem can be generalized as: finding a subarray of an integer array with the maximum sum.
 
-Kadane's algorithm (a simple dynamic programming solution):
+[Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem)(a simple dynamic programming solution):
 
 n[i] = the ith element in the array
 
@@ -63,10 +63,10 @@ Space: O(1)
 
 We can convert the stock price array into an array of difference prices, i.e.:
 
-- p[0] = 0
-- p[i] = p[i] - p[i - 1], for i > 0
+- d[0] = 0
+- d[i] = p[i] - p[i - 1], for i > 0
 
-Finding a pair of indices with the greatest price difference is equivalent as finding a subarray with the maximum sum.
+Finding a pair of indices with the greatest price difference in p is equivalent as finding a subarray with the maximum sum in d.
 
 ```java
 public class Solution {
