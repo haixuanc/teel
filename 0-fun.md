@@ -53,3 +53,4 @@
 - [ ] 438. Find all anagrams in a string
 - [ ] 121. Best time to buy and sell stock
 - [ ] 235. Lowest common ancestor of a binary search tree
+- [ ] 206. Reverse linked list
