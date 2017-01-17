@@ -1,9 +1,14 @@
-### Programming topics
+## Programming topics
 
 - Two pointers
 - Backtrace
 - Linked list - dummy header
 - Linked list - two runners
+
+## Trees
+
+- Note whether the problem is about **binary trees** or **binary search trees**.
+- If we are given a sequence of binary search tree nodes in preorder, we can reconstruct the tree recursively.
 
 ## Fun problems
 
