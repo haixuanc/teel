@@ -9,6 +9,7 @@
 
 - Note whether the problem is about **binary trees** or **binary search trees**.
 - If we are given a sequence of binary search tree nodes in preorder, we can reconstruct the tree recursively.
+- Usually a binary search tree problem can be solved either iteratively or recursively. If got stuck when thinking in one way e.g. iterative, try the other direction e.g. recursion.
 
 ## Fun problems
 
