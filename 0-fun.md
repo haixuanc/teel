@@ -9,6 +9,7 @@
 
 - Note whether the problem is about **binary trees** or **binary search trees**.
 - If we are given a sequence of binary search tree nodes in preorder, we can reconstruct the tree recursively.
+- To solve BST or binary tree serialization and deserialization problems, we use **preorder** DFS recursion or level-by-level BFS.
 - Usually a binary search tree problem can be solved either iteratively or recursively. If got stuck when thinking in one way e.g. iterative, try the other direction e.g. recursion.
 
 ## Fun problems
@@ -64,3 +65,4 @@
 - [ ] 236. Lowest common ancestor of a binary tree
 - [ ] 078. Subsets
 - [ ] 449. Serialize and deserialize BST
+- [ ] 297. Serialize and deserialize binary tree
