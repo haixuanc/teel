@@ -93,3 +93,46 @@ public class Solution {
   }
 }
 ```
+
+### A more streamlined version
+
+Loop invariant:
+
+The `stack` contains only nodes on the left path for each node.
+
+1. pivot = null, stack.push(preorder[0])
+2.1 If stack.top == inorder[j], pivot = stack.pop() && j++
+2.2 If pivot != null, pivot.right = preorder[i] && stack.push(preorder[i]) && i++
+2.3 If pivot == null, stack.top.left = preorder[i] && stack.push(preoder[i]) && i++
+
+```java
+/**
+ * Definition for a binary tree node.
+ *  * public class TreeNode {
+ *   *     int val;
+ *    *     TreeNode left;
+ *     *     TreeNode right;
+ *      *     TreeNode(int x) { val = x; }
+ */
+public class Solution {
+  public TreeNode buildTree(int[] preorder, int[] inorder) {
+    if (preorder.length == 0 || preorder.length != inorder.length) return null;
+    TreeNode root = new TreeNode(preorder[0]);
+    Deque<TreeNode> stack = new ArrayDeque<TreeNode>();
+    stack.addFirst(root);
+    TreeNode pivot = null;
+    for (int i = 1, j = 0; i < preorder.length && j < inorder.length; ) {
+      if (!stack.isEmpty() && stack.peekFirst().val == inorder[j]) {
+        pivot = stack.removeFirst();
+        j++;
+      } else if (pivot != null) {
+        stack.addFirst(pivot.right = new TreeNode(preorder[i++]));
+        pivot = null;
+      } else {
+        stack.addFirst(stack.peekFirst().left = new TreeNode(preorder[i++]));
+      }
+    }
+    return root;
+  }
+}
+```
