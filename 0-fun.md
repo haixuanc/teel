@@ -5,6 +5,9 @@
 - Linked list - dummy header
 - Linked list - two runners
 
+- Trie
+- Disjoint set/union-find
+
 ## Trees
 
 - Note whether the problem is about **binary trees** or **binary search trees**.
