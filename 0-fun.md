@@ -7,6 +7,8 @@
 
 - Trie
 - Disjoint set/union-find
+- Topological sort
+- Heap
 
 ## Trees
 
