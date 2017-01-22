@@ -5,6 +5,9 @@
 - Linked list - dummy header
 - Linked list - two runners
 
+- Dynamic programming
+- Binary trees, BST
+- Graph: BFS, DFS
 - Trie
 - Disjoint set/union-find
 - Topological sort
@@ -74,3 +77,4 @@
 - [ ] 105. Construct binary tree from preorder and inorder traversal
 - [ ] 200. Number of islands
 - [ ] 451. Sort characters by frequency
+- [ ] 139. Word break
