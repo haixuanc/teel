@@ -12,6 +12,8 @@
 - Disjoint set/union-find
 - Topological sort
 - Heap
+- Dijkstra's algorithm
+- DP, NPD
 
 ## Trees
 
@@ -83,3 +85,4 @@
 - [ ] 199. Binary tree right side view
 - [ ] 098. Validate binary search tree
 - [ ] 048. Rotate image
+- [ ] 127. Word ladder
