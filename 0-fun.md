@@ -82,3 +82,4 @@
 - [ ] 215. Kth largest element in an array
 - [ ] 199. Binary tree right side view
 - [ ] 098. Validate binary search tree
+- [ ] 048. Rotate image
