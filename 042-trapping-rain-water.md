@@ -31,6 +31,29 @@ public class Solution {
 }
 ```
 
+A more standard version:
+
+```java
+public class Solution {
+  public int trap(int[] height) {
+    if (height.length <= 2) return 0;
+    int total = 0;
+    for (int left = 0, right = height.length - 1, maxLeft = height[0], maxRight = height[height.length - 1]; left < right; ) {
+      if (height[left] <= height[right]) {
+        maxLeft = Math.max(maxLeft, height[left]);
+        maxRight = Math.max(maxRight, height[right]);
+        total += Math.min(maxLeft, maxRight) - height[left++];
+      } else {
+        maxLeft = Math.max(maxLeft, height[left]);
+        maxRight = Math.max(maxRight, height[right]);
+        total += Math.min(maxLeft, maxRight) - height[right--];
+      }
+    }
+    return total;
+  }
+}
+```
+
 ## Solution 2. Stack
 
 In order to determine how much water a slot can trap, we must know both of its left and right bounds.
