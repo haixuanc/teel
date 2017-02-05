@@ -89,3 +89,4 @@
 - [ ] 126. Word ladder II
 - [ ] 023. Merge k sorted lists
 - [ ] 042. Trapping rain water
+- [ ] 146. LRU cache
