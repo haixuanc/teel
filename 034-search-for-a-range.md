@@ -14,6 +14,30 @@ return [3, 4].
 
 ```java
 public class Solution {
+  public int[] searchRange(int[] nums, int target) {
+    int[] range = { -1, - 1};
+    // Find the lower bound
+    for (int i = 0, j = nums.length - 1; i <= j; ) {
+      int k = (i + j) / 2;
+      if (nums[k] == target) range[0] = k;
+      if (target > nums[k]) i = k + 1;
+      else j = k - 1;
+    }
+    if (range[0] == -1) return range;
+    // Find the upper bound
+    for (int i = range[0], j = nums.length - 1; i <= j; ) {
+      int k = (i + j) / 2;
+      if (nums[k] == target) range[1] = k;
+      if (target < nums[k]) j = k - 1;
+      else i = k + 1;
+    }
+    return range;
+  }
+}
+```
+
+```java
+public class Solution {
     public int[] searchRange(int[] nums, int target) {
 		return range(nums, target, 0, nums.length - 1);
     }
@@ -58,6 +82,30 @@ public class Solution {
 		// It is not guaranteed that target is in the array
 		return nums[start] == target ? start : -1;
 	}
+}
+```
+
+## Solution 2. Linear search
+
+```java
+public class Solution {
+  public int[] searchRange(int[] nums, int target) {
+    return search(nums, 0, nums.length - 1, target);
+  }
+
+  private int[] search(int[] nums, int left, int right, int target) {
+    if (left > right) return new int[] { -1, -1 };
+    int mid = (left + right) / 2;
+    if (nums[mid] == target) {
+      int[] range = search(nums, left, mid - 1, target);
+      if (range[0] == -1) range[0] = mid;
+      range[1] = search(nums, mid + 1, right, target)[1];
+      if (range[1] == -1) range[1] = mid;
+      return range;
+    }
+    if (nums[mid] < target) return search(nums, mid + 1, right, target);
+    return search(nums, left, mid - 1, target);
+  }
 }
 ```
 
