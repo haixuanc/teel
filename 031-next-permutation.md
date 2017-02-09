@@ -23,40 +23,24 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 
 ```java
 public class Solution {
-    public void nextPermutation(int[] nums) {
-		int i = nums.length - 2;
-		while (i >= 0 && nums[i] >= nums[i + 1]) {
-			i--;
-		}
-		if (i < 0) {
-			reverse(nums, 0, nums.length - 1);
-			return;
-		}
-		int j = i + 1;
-		// CAUTION:
-		// We cannot use `nums[i] <= nums[j]`. We need to find the smallest
-		// number that is greater than, not equal to, nums[i].
-		//
-		// nums[i + 1:] is in descending order and it is the largest permuation
-		// for that segment, so nums[i:] is the largest permuation starting with
-		// value nums[i] for that segment. The next permutation will be
-		// min(nums[i+1:])+minPermutation(nums[i+1:]).
-		while (j < nums.length && nums[i] < nums[j]) {
-			j++;
-		}
-		j--;
-		int tmp = nums[i];
-		nums[i] = nums[j];
-		nums[j] = tmp;
-		reverse(nums, i + 1, nums.length - 1);
+  public void nextPermutation(int[] nums) {
+    if (nums.length <= 1) return;
+    int i = nums.length - 1;
+    while (i > 0 && nums[i - 1] >= nums[i]) i--;
+    if (i > 0) {
+      int j = nums.length - 1;
+      while (j >= i && nums[j] <= nums[i - 1]) j--;
+      swap(nums, i - 1, j);
     }
+    for (int j = nums.length - 1; i < j; ) {
+      swap(nums, i++, j--);
+    }
+  }
 
-	private void reverse(int[] nums, int start, int end) {
-		for ( ; start < end; start++, end--) {
-			int tmp = nums[start];
-			nums[start] = nums[end];
-			nums[end] = tmp;
-		}
-	}
+  private void swap(int[] nums, int i, int j) {
+    int t = nums[i];
+    nums[i] = nums[j];
+    nums[j] = t;
+  }
 }
 ```
