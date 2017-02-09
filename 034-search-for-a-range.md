@@ -109,6 +109,36 @@ public class Solution {
 }
 ```
 
+## Solution 3. One binary search
+
+In order to save time based on solution 3, we need to find a way to exclude half of the array in constant time. If a[left] == a[right] == target, the range is [left, right] and the call can terminate immediately. We can easily prove that our algorithm will always search only half of the remaining array with one extra call if a[left] <= target <= a[right]. [Look for details at Leetcode post](https://discuss.leetcode.com/topic/16486/9-11-lines-o-log-n)
+
+Time: O(lgn)
+
+Space: O(lgn)
+
+```java
+public class Solution {
+  public int[] searchRange(int[] nums, int target) {
+    return search(nums, 0, nums.length - 1, target);
+  }
+
+  private int[] search(int[] nums, int left, int right, int target) {
+    if (left > right) return new int[] { -1, -1 };
+    if (nums[left] == nums[right] && nums[left] == target) return new int[] { left, right };
+    if (nums[left] <= target && target <= nums[right]) {
+      int[] lower = search(nums, left, (left + right) / 2, target);
+      int[] upper = search(nums, (left + right) / 2 + 1, right, target);
+      if (lower[0] == -1) return upper;
+      if (upper[0] == -1) return lower;
+      lower[1] = upper[1];
+      return lower;
+    }
+    return new int[] { -1, -1 };
+  }
+}
+```
+
 ## Toughts on binary search
 
 When thinking about how binary search works, it is better to treat the problem as removing unwanted elements from the array until the only element left is target so target is found, or array becomes empty therefore target is not found.
