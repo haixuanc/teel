@@ -16,14 +16,11 @@ Time: O(sqrt(n))
 
 ```java
 public class Solution {
-    public int mySqrt(int x) {
-		if (x == 0) return 0;
-		int i = x;
-		while (i > x / i) {
-			i--;
-		}
-		return i;
-    }
+  public int mySqrt(int x) {
+    int i = 1;
+    while (i <= x / i) i++; // Use division to avoid integer overflow when multiple two integers
+    return --i;
+  }
 }
 ```
 
@@ -68,18 +65,15 @@ Time: O(lgn)
 
 ```java
 public class Solution {
-    public int mySqrt(int x) {
-		if (x == 0) return 0;
-		// It is easier to start with an overestimate because at every
-		// iteration the estimate will become smaller. The first underestimate
-		// will be the square root because (i + 1) ^ 2 > x and i ^ 2 <= x,
-		// which satisfies the definition of square root.
-		long i = x;
-		// Use long to avoid integer overflow, e.g. x = 2 ^ 31 - 1
-		while (i > x / i) {
-			i = (i + x / i) >> 1;
-		}
-		return (int) i;
-	}
+  public int mySqrt(int x) {
+    if (x == 0) return 0;
+    // NOTE: zero cannot be a square root
+    int root = x;
+    while (root > x / root) {
+      // Use `lower + (upper - lower) / 2` to avoid integer overflow when adding two large integers
+      root = x / root + ((root - x / root) >> 1);
+    }
+    return root;
+  }
 }
 ```
