@@ -54,6 +54,33 @@ public class Solution {
 }
 ```
 
+```java
+public class Solution {
+  public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+    List<List<Integer>> res = new ArrayList<List<Integer>>();
+    Arrays.sort(candidates);
+    find(res, new ArrayList<Integer>(), candidates, 0, target);
+    return res;
+  }
+
+  private void find(List<List<Integer>> res, List<Integer> sum, int[] candidates, int cur, int target) {
+    if (target == 0) {
+      res.add(new ArrayList<Integer>(sum));
+      return ;
+    }
+    if (cur >= candidates.length) return;
+    for (int i = cur; i < candidates.length; i++) {
+      if (i > cur && candidates[i] == candidates[i - 1]) continue;
+      if (candidates[i] <= target) {
+        sum.add(candidates[i]);
+        find(res, sum, candidates, i + 1, target - candidates[i]);
+        sum.remove(sum.size() - 1);
+      }
+    }
+  }
+}
+```
+
 ## How backtrace works
 
 Backtrace is the technique of using a shared data structure to store the final solution when traversing a graph in a DFS manner.
