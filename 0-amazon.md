@@ -1,3 +1,5 @@
+» Remember to go over every technical skill, e.g. Docker, and project details that is listed on resume.
+
 ## Object-Oriented Design
 
 - Design patterns: singleton, factory, listener, etc.
