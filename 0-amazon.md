@@ -1,4 +1,4 @@
-» Remember to go over every technical skill, e.g. Docker, and project details that is listed on resume.
+>» Remember to go over every technical skill, e.g. Docker, and project details that is listed on resume.
 
 ## Object-Oriented Design
 
