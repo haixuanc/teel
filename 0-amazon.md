@@ -1,4 +1,5 @@
->» Remember to go over every technical skill, e.g. Docker, and project details that is listed on resume.
+>Remember to go over every technical skill, e.g. Docker, and project details that is listed on resume.
+>Search and practice Amazon's object-oriented design and system design questions.
 
 ## Object-Oriented Design
 
