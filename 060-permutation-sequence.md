@@ -27,7 +27,7 @@ The fact about Kth permutation is that:
 
 At each iteration:
 - digit(i) = (k / (n - 1 - i)!) th of the remaining digits
-- k %= (n - 1 - i)
+- k %= (n - 1 - i)!
 
 Time: O(n)
 
