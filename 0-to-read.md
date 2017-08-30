@@ -8,6 +8,8 @@
 - [ ] [Chrome Blink Rendering Engine](http://www.chromium.org/blink)
 - [ ] [Event Bubbling and Capturing](http://javascript.info/tutorial/bubbling-and-capturing)
 - [ ] [HTTP Caching](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
+- [ ] [Modularization in TypeScript](https://keyholesoftware.com/2013/01/14/modularization-in-typescript/)
+- [ ] [AMD vs. CommonJS](http://unscriptable.com/code/AMD-vs-CommonJS/#0)
 
 ## Algorithms
 
